@@ -72,7 +72,7 @@ class bono{
 
     public descuento(){
         let desc:number = 0;
-        desc = this.bonop() + this.horasc();
+        desc = this.bonop() - this.horasc();
         (<HTMLInputElement>document.getElementById("bono")).value = desc.toString();
     }
 
