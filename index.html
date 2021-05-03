@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <title>Bono</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col mt-5">
+                <div class="jumbotron jumbotron-fluid border border-info" style="background-color:#8fbae1;">
+                    <div class="container">
+                        <h1 class="display-4">Bono</h1>
+                        <h4>Datos del empleado</h4>
+                        <form>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <label for="" class="col-sm-2 col-form-label">Sueldo</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control w-auto p-3 border border-info" id="sueldo"
+                                        style="background-color:#72baf3 ;">
+                                    
+                                </div>
+                                <label for="" class="col-sm-2 col-form-label">Edad</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control w-auto p-3 border border-info" id="edad"
+                                        style="background-color:#72baf3 ;">
+                                    
+                                </div>
+                                
+                            </div> 
+                            <br>
+                            
+                            <div class="btn-group mt-2" role="group" aria-label="Basic example">
+                                <label for="sexo" class="col-sm-2 col-form-label">Sexo</label>
+                                <div class="col-sm-10 ml-3">
+                                    <select name="sexo" id="sexo" class="form-control w-50 " style="background-color:#72baf3 ;">
+                                        <option value="">Seleccionar</option>
+                                        <option value="Masculino">Masculino</option>
+                                        <option value="Femenino">Femenino</option>
+                                    </select>
+                                    
+                                </div>
+                                <label for="sexo" class="col-sm-2 col-form-label ml-3">Nacionalidad:</label>
+                                <div class="col-sm-10 ml-5">
+                                    <select name="nacionalidad" id="nacionalidad" class="form-control w-50" style="background-color:#72baf3 ;">
+                                        <option value="nacional">Nacional</option>
+                                        <option value="extranjero">Extranjero</option>
+                                    </select>
+                                    
+                                </div>
+                                
+                            </div>  
+                        </form>
+                        <hr>
+                        <form class="mr-4" >
+                            <div class="btn-group mt-2 div-control" role="group" aria-label="Basic example" >
+                                <div class="card" style="width: 18rem;" >
+                                    <div class="col-sm-10 ml-5" >
+                                        <label for="php">PHP:</label>
+                                        <input type="checkbox" id="php" value="PHP" onclick="" >
+
+                                        <label for="java" class="ml-5">JAVA:</label>
+                                        <input type="checkbox" id="java" value="java" onclick="">
+                                        
+                                    </div>
+                                    <div class="col-sm-10 ml-5">
+                                        <label for="asp">APS.Net</label>
+                                        <input type="checkbox" id="asp" value="asp" onclick="">
+
+                                        <label for="oracle" class="ml-4">ORACLE:</label>
+                                        <input type="checkbox" id="oracle" value="oracle" onclick="">
+                                        
+                                    </div>
+                                    <div class="col-sm-10 ml-5">
+                                        <label for="vb">VB.Net:</label>
+                                        <input type="checkbox" id="vb" value="vb" onclick="">
+
+                                        <label for="bd" class="ml-4">Intro. BD:</label>
+                                        <input type="checkbox" id="bd" value="bd" onclick="" >
+                                        
+                                    </div>
+                                </div>
+                                
+                            </div>  
+                            <div class="btn-group mt-2" role="group" aria-label="Basic example">
+                                <div class="card" style="width: 18rem;">
+                                    <div>
+                                        <input type="radio" id="1a5a" name="años" value="1a5a">
+                                        <label>1 a 5 años</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="6a10a" name="años" value="6a10a">
+                                        <label>6 a 10 años</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="10a" name="años" value="10a" >
+                                        <label>Mas de 10 años</label>
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div> 
+                            <div class="btn-group mt-2" role="group" aria-label="Basic example">
+                                <div class="col-sm-10 ">
+                                    <button type="button" class="btn btn-outline-light" onclick="calcular()">Calcular</button>
+                                </div>
+                                
+                                <div class="col-sm-10 ">
+                                    <button class="btn btn-outline-light" onclick="limpiar()">Nuevo Calculo</button>
+                                </div>
+                                
+                                
+                            </div>  
+                             
+                            
+                        </form>
+                        <form class="mr-4 justify-content-end">
+                            <div class="btn-group mt-3 " role="group" aria-label="Basic example">
+                                <label class="just">Bono:</label>
+                                <input id="bono" class="ml-1" readonly style="background-color:#72baf3 ;">
+                             </div> 
+                        </form>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <script src="bono.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
